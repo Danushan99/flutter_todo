@@ -8,6 +8,9 @@ class AddTodoPage extends StatefulWidget {
 }
 
 class _AddTodoPageState extends State<AddTodoPage> {
+
+  TextEditingController titleContoller = TextEditingController();
+  TextEditingController descriptionContoller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +38,6 @@ class _AddTodoPageState extends State<AddTodoPage> {
     );
   }
   void submitData(){
-    
+
   }
 }
