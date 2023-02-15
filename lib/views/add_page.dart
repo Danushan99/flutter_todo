@@ -20,11 +20,13 @@ class _AddTodoPageState extends State<AddTodoPage> {
       body: ListView(
         padding: const EdgeInsets.all(15),
         children: [
-          const TextField(
+           TextField(
+            controller: titleContoller,
             decoration: InputDecoration(hintText: "Title"),
           ),
           const SizedBox(height: 20,),
-          const TextField(
+           TextField(
+             controller: descriptionContoller,
             decoration: InputDecoration(hintText: "Description"),
             minLines: 5,
             maxLength: 20,
@@ -38,6 +40,13 @@ class _AddTodoPageState extends State<AddTodoPage> {
     );
   }
   void submitData(){
-
+// det data from form
+final title = titleContoller.text;
+final description = descriptionContoller.text;
+final body ={
+  "title": title,
+  "description":description,
+  "is_completed": false
+};
   }
 }
